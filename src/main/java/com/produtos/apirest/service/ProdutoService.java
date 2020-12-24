@@ -20,13 +20,14 @@ public class ProdutoService {
 		
 		ProdutoDTO produtoDTO = new ProdutoDTO();
 		
-		List<Produto> prod =  produtoRepository.findAll();
-		List endereco = new ArrayList();
+		List<Produto> prod = produtoRepository.findAll();
+		
+		List<String> endereco = new ArrayList<>();
 	    endereco.add("Rua tres, 1888");
 	    endereco.add("Rua dois, 218");
 	    endereco.add("Rua um, 69");
 		
-	    List especialidade = new ArrayList();
+	    ArrayList<Object> especialidade = new ArrayList<>();
 	    especialidade.add("Java");
 	    especialidade.add("hibernate");
 	    especialidade.add("Spring MVC");

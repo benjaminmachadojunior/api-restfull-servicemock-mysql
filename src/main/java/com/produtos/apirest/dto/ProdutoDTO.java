@@ -1,5 +1,6 @@
 package com.produtos.apirest.dto;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import com.produtos.apirest.models.Produto;
@@ -8,9 +9,11 @@ public class ProdutoDTO {
 
 	private int id;
 	private String nome;
-	private List<Endereco> endereco;
-	private List<Endereco> especialidade;
+	private List<String> endereco;
+	private List<Object> especialidade;
 	private List<Produto> produtos;
+	
+	
 	public int getId() {
 		return id;
 	}
@@ -23,17 +26,21 @@ public class ProdutoDTO {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	public List<Endereco> getEndereco() {
+
+
+	
+
+	public List<String> getEndereco() {
 		return endereco;
 	}
-	public void setEndereco(List<Endereco> endereco) {
+	public void setEndereco(List<String> endereco) {
 		this.endereco = endereco;
 	}
-	public List<Endereco> getEspecialidade() {
+	public List<Object> getEspecialidade() {
 		return especialidade;
 	}
-	public void setEspecialidade(List<Endereco> especialidade) {
-		this.especialidade = especialidade;
+	public void setEspecialidade(ArrayList<Object> especialidade2) {
+		this.especialidade = especialidade2;
 	}
 	public List<Produto> getProdutos() {
 		return produtos;
@@ -47,5 +54,6 @@ public class ProdutoDTO {
 				+ ", produtos=" + produtos + "]";
 	}
 
+	
 
 }
